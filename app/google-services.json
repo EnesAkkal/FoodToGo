@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "461046338798",
+    "project_id": "foodtogo-766eb",
+    "storage_bucket": "foodtogo-766eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461046338798:android:fe49f8cb50a4cf18290fff",
+        "android_client_info": {
+          "package_name": "com.enesakkal.foodToGo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461046338798-1bhcan5ekd0utledjf05foio2vcifuap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOZHlDKmnabufeFJ1UI6ljGkXM0rgnlyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461046338798-1bhcan5ekd0utledjf05foio2vcifuap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
