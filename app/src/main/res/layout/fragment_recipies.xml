@@ -9,7 +9,6 @@
             type="com.enesakkal.foodToGo.viewmodels.MainViewModel" />
 
     </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,7 +34,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
 
                 <include layout="@layout/placeholder_row_layout" />
 
@@ -95,7 +93,6 @@
         android:alpha bizim olusturdugumuz ımageview'in opaklığını ayarlıyor.Üstten 0 a doğru gıderken opaklık gıder ve 0 da en şeffaf
         halini alır (transparency)
        -->
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/recipes_fab"
             android:layout_width="66dp"
@@ -107,8 +104,6 @@
             android:src="@drawable/ic_baseline_restaurant_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 
