@@ -6,10 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import com.enesakkal.foodToGo.R
 import com.enesakkal.foodToGo.databinding.ActivityLoginBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -19,7 +23,8 @@ class LoginActivity: Fragment() {
 
     private var _binding: ActivityLoginBinding? = null
     private val binding get() = _binding!!
-     private lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
+    private lateinit var navController: NavController
 
 
     override fun onCreateView(
@@ -49,15 +54,10 @@ class LoginActivity: Fragment() {
                    Toast.makeText(requireActivity(),it.localizedMessage,Toast.LENGTH_LONG).show()
                 }
             }
-
-
-
     }
-
     fun onLogin (view : View) {
 
+
     }
-
-
-
+    
 }
