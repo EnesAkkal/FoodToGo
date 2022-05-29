@@ -129,7 +129,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
+             <!--   <Button
                     android:id="@+id/button5"
                     style="@style/Widget.Material3.ExtendedFloatingActionButton.Primary"
                     android:layout_width="170dp"
@@ -143,9 +143,9 @@
                     android:text="Login with Google"
                     android:textColor="#636363"
                     android:textSize="10sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold" />   -->
 
-                <Button
+         <!--       <Button
                     android:id="@+id/button3"
                     style="@style/Widget.Material3.ExtendedFloatingActionButton.Primary"
                     android:layout_width="170dp"
@@ -160,7 +160,7 @@
                     android:text="Login with Facebook"
                     android:textColor="#636363"
                     android:textSize="10sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold" /> -->
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
