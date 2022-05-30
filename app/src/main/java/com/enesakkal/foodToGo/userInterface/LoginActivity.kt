@@ -7,13 +7,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import com.enesakkal.foodToGo.R
 import com.enesakkal.foodToGo.databinding.ActivityLoginBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -35,29 +31,55 @@ class LoginActivity: Fragment() {
         _binding = ActivityLoginBinding.inflate(inflater, container, false)
         auth = Firebase.auth
 
+        binding.loginButton.setOnClickListener {
+            val email = binding.emailText.text.toString()
+            val password = binding.passwordText.text.toString()
+
+            if (email.equals("") || password.equals("")) {
+                Toast.makeText(requireActivity(),"Enter your Email and Password!",Toast.LENGTH_LONG).show()
+            }else {
+                auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
+                    findNavController().navigate(R.id.action_loginActivity_to_recipiesFragment)
+                }.addOnFailureListener {
+                    Toast.makeText(requireActivity(),it.localizedMessage,Toast.LENGTH_LONG).show()
+                }
+            }
+        }
 
         return binding.root
     }
 
 
-    fun onSignUp(view : View) {
-        val email = binding.emailText.text.toString()
-        val password = binding.passwordText.text.toString()
 
-        if (email.isEmpty() && password.isEmpty()) {
+
+
+   /* override fun onResume() {
+        fun onSignUp(view: View?) {
+            val email = binding.emailText.text.toString()
+            val password = binding.passwordText.text.toString()
+
+            if (email.isEmpty() && password.isEmpty()) {
                 Toast.makeText(requireActivity(),"enter your password",Toast.LENGTH_LONG).show() //requireActivity is needed if you use fragment.
             }else {
                 auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
                     //Success
                     findNavController().navigate(R.id.action_loginActivity_to_recipiesFragment)
                 }.addOnFailureListener {
-                   Toast.makeText(requireActivity(),it.localizedMessage,Toast.LENGTH_LONG).show()
+                    Toast.makeText(requireActivity(),it.localizedMessage,Toast.LENGTH_LONG).show()
                 }
             }
-    }
-    fun onLogin (view : View) {
+        }
+        fun onLogin (view: View?) {
 
 
+
+        }
+
+        onSignUp(view)
+        super.onResume()
+
+    */
     }
-    
-}
+
+
+
