@@ -15,7 +15,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 
-class LoginActivity: Fragment() {
+class LoginFragment: Fragment() {
 
     private var _binding: ActivityLoginBinding? = null
     private val binding get() = _binding!!
@@ -46,39 +46,18 @@ class LoginActivity: Fragment() {
             }
         }
 
+        binding.signButton.setOnClickListener {
+            findNavController().navigate(R.id.action_loginActivity_to_signFragment)
+        }
+
         return binding.root
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
-
-
-
-   /* override fun onResume() {
-        fun onSignUp(view: View?) {
-            val email = binding.emailText.text.toString()
-            val password = binding.passwordText.text.toString()
-
-            if (email.isEmpty() && password.isEmpty()) {
-                Toast.makeText(requireActivity(),"enter your password",Toast.LENGTH_LONG).show() //requireActivity is needed if you use fragment.
-            }else {
-                auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
-                    //Success
-                    findNavController().navigate(R.id.action_loginActivity_to_recipiesFragment)
-                }.addOnFailureListener {
-                    Toast.makeText(requireActivity(),it.localizedMessage,Toast.LENGTH_LONG).show()
-                }
-            }
-        }
-        fun onLogin (view: View?) {
-
-
-
-        }
-
-        onSignUp(view)
-        super.onResume()
-
-    */
     }
 
 

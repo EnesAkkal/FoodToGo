@@ -49,24 +49,10 @@
                 android:textAlignment="center"
                 android:text="Discover your favourite food!" />
 
-            <EditText
-                android:id="@+id/emailText"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/grey_background"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:hint="Enter Your Name"
-                android:inputType="textPersonName"
-                android:padding="10dp"
-                android:textColorHint="#858585"
-                android:textSize="16sp" />
+
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/emailTextSign"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
@@ -83,7 +69,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/passwordTextSign"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
@@ -100,7 +86,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/passwordText"
+                android:id="@+id/rePasswordText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
@@ -131,7 +117,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/signButton"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginStart="32dp"

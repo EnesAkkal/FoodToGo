@@ -79,6 +79,9 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
+                R.id.signFragment -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                }
                 R.id.loginActivity -> {
                     binding.bottomNavigationView.visibility = View.GONE
                 }
@@ -87,9 +90,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
-
-
 
         binding.bottomNavigationView.setupWithNavController(navController)
         setupActionBarWithNavController(navController,appBarConfiguration)

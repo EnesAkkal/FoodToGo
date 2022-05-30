@@ -57,10 +57,21 @@
     </activity>
     <fragment
         android:id="@+id/loginActivity"
-        android:name="com.enesakkal.foodToGo.userInterface.LoginActivity"
+        android:name="com.enesakkal.foodToGo.userInterface.LoginFragment"
         android:label="LoginActivity" >
         <action
             android:id="@+id/action_loginActivity_to_recipiesFragment"
+            app:destination="@id/recipiesFragment" />
+        <action
+            android:id="@+id/action_loginActivity_to_signFragment"
+            app:destination="@id/signFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signFragment"
+        android:name="com.enesakkal.foodToGo.userInterface.SignFragment"
+        android:label="SignFragment" >
+        <action
+            android:id="@+id/action_signFragment_to_recipiesFragment"
             app:destination="@id/recipiesFragment" />
     </fragment>
 </navigation>
